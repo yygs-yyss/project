@@ -1,6 +1,5 @@
 package com.example.demo.common;
 
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,6 @@ public class EncryptComponent {
     // 必须声明在最后，否则无法获取空指针
     @Autowired
     private TextEncryptor encryptor;
-
     /**
      * 直接基于密钥/盐值创建单例TextEncryptor对象。避免反复创建
      * @return
@@ -41,7 +39,6 @@ public class EncryptComponent {
             throw new MyException(500, "服务器端错误");
         }
     }
-
     /**
      * 无法验证/解密/反序列化，说明数据被篡改，判定无权限
      * @param auth
