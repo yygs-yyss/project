@@ -10,10 +10,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Doctor {
-    private String id;
-    private String nickName;
-    private String userName;
-    private String password;
-    private Date time;
+    private long id;
+    private String name;
+    private String gender;
+    private int age;
+    private Date workTime;
     private String technicalOffice;
+    private String detail;
 }
